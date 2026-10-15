@@ -43,11 +43,17 @@ async function displayBusPositions() {
     const terminus = terminiByTripId.get(bus.tripId) ?? "Inconnu";
     const busPosition = [bus.latitude, bus.longitude];
     if (markers.has(bus.id)) {
-      markers.get(bus.id).setLatLng(busPosition);
+      const marker = markers.get(bus.id);
+      marker.setLatLng(busPosition);
+      marker.setPopupContent(
+        `<strong>Bus ${bus.line}</strong><br>Terminus : ${terminus}`,
+      );
     } else {
       const marker = L.marker(busPosition)
         .addTo(map)
-        .bindPopup(`<strong>Bus ${bus.line}</strong>\nTerminus: ${terminus}`);
+        .bindPopup(
+          `<strong>Bus ${bus.line}</strong><br>Terminus : ${terminus}`,
+        );
       markers.set(bus.id, marker);
     }
   });
