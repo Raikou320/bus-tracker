@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/protobufjs/8.8.1/protobuf.js"></script>
+
+    <title>Bus Tracker</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <label for="line-select">Sélectionner la ligne:</label>
+    <select name="line-select" id="line-select">
+      <option value="N1">Ligne n1</option>
+      <option value="N2">Ligne n2</option>
+      <option value="N3">Ligne n3</option>
+      <option value="N4">Ligne n4</option>
+      <option value="5A">Ligne 5a</option>
+      <option value="5B">Ligne 5b</option>
+      <option value="6">Ligne 6</option>
+      <option value="7">Ligne 7</option>
+      <option value="8">Ligne 8</option>
+      <option value="9">Ligne 9</option>
+      <option value="10">Ligne 10</option>
+      <option value="11">Ligne 11</option>
+      <option value="12">Ligne 12</option>
+      <option value="13">Ligne 13</option>
+      <option value="14">Ligne 14</option>
+      <option value="15">Ligne 15</option>
+      <option value="16">Ligne 16</option>
+      <option value="L">Ligne L</option>
+      <option value="CDV">Cœur de ville</option>
+    </select>
+    <div id="map"></div>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
